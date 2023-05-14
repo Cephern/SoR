@@ -13,12 +13,14 @@ body {
 
 .colorWrapper {
   background-color: var(--primary-color);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 3;
 }
 
 .mainNav {
-  max-width: 1400px;
-  position: sticky;
-  top: 0;
+  width: 1400px;
   margin: 0 auto;
   height: 90px;
   display: flex;
@@ -28,8 +30,7 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-left: 40px;
+  justify-content: flex-start;
   width: 20%;
 }
 
@@ -37,6 +38,7 @@ body {
   width: 70px;
   border-radius: 8px;
   filter: drop-shadow(0px 4px 20px #eee);
+  margin-left: 40px;
 }
 
 .logo p {
@@ -56,13 +58,38 @@ body {
   color: #00ffca;
 }
 
-.mainNav ul {
-  list-style: none;
-  width: 80%;
+.mainNav .search {
+  width: 30%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin-right: 10%;
+  justify-content: center;
+}
+
+.search input {
+  display: block;
+  width: 80%;
+  height: 34px;
+  border-radius: 20px;
+  max-width: 300px;
+  padding: 1px 10px;
+  font-size: 1.1em;
+}
+
+.search i {
+  margin-left: 14px;
+  background-color: #fff;
+  padding: 9px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mainNav ul {
+  list-style: none;
+  padding: 0;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mainNav ul li a {
@@ -77,11 +104,25 @@ body {
   transition: 0.5s;
 }
 
+.mainNav li.appointmentLi {
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+
+.mainNav li.appointmentLi a {
+  display: block;
+  border: 2px solid #fff;
+  background-color: #fff;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin: 5px;
+}
+
 /* main */
 
 main {
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 90px auto 0;
   background-color: #fff;
 }
 
@@ -94,6 +135,11 @@ main {
   background: url("./assets/bg.png") no-repeat center;
   object-fit: contain;
   box-shadow: 0px 4px 10px 0px #000;
+  overflow: hidden;
+}
+
+.hero:hover .imgWrapper img {
+  scale: 1.1;
 }
 
 .dimmer {
@@ -114,6 +160,8 @@ main {
 .imgWrapper img {
   filter: drop-shadow(14px 4px 20px #000);
   height: 90%;
+
+  transition: 0.4s ease;
 }
 
 .textWrapper {
@@ -213,8 +261,49 @@ main {
   height: 100%;
   box-sizing: border-box;
   padding: 10px;
+
+  transition: 0.2s ease;
+}
+
+.service:hover {
+  box-shadow: 2px 0px 4px 2px #000, -2px 0px 4px 2px #000;
+  transform: scale(1.02);
+}
+
+.service .headingWrapper {
+  width: 80%;
+  height: 60px;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  padding: 4px 8px;
+  margin-bottom: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .service p {
-  max-width: 300px;
+  text-align: justify;
+  padding: 0 20px;
+  height: 50%;
+  box-sizing: border-box;
+}
+
+.service button {
+  padding: 10px 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+  background-color: #fff;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.service button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
 }
