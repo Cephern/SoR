@@ -11,7 +11,6 @@
 </head>
 <body>
     <div class="colorWrapper">
-
         <nav class="mainNav">
             <div class="logo">
                 <img src="assets/logo8.png" alt="Look at the Law Logo">
@@ -25,15 +24,15 @@
             
             <ul>
                 <li><a href="#hero">Главная</a></li>
-                <li><a href="#hero">Услуги</a></li>
-                <li><a href="#hero">Цены</a></li>
-                <li class="appointmentLi"><a href="#hero">Запись</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#prices">Цены</a></li>
+                <li class="appointmentLi"><a href="#appoint">Запись</a></li>
             </ul>
         </nav>
     </div>
 
     <main>
-        <section class="hero" id="#hero">
+        <section class="hero" id="hero">
             <div class="dimmer"></div>
 
             <div class="imgWrapper">
@@ -112,8 +111,70 @@
             </div>
         </div>
     </section>
+
+    <section id="prices">
+        <div class="pricesInner">
+            <div class="heading">
+                <h2>Цены на услуги</h2>
+            </div>
+
+            <div class="pricesTable">
+                <div class="priceItem">
+                    <p class="priceName">Консультация в офисе адвоката</p>
+                    <div class="price">
+                        <p>1 000</p>
+                        <p>рублей в час</p>
+                    </div>
+                </div>
+                <div class="priceItem">
+
+                        <p class="priceName">Консультация с выездом в пределах города</p>
+                        <div class="price">
+                            <p>5 000</p>
+                            <p>рублей в час</p>
+                        </div>
+
+                </div>
+                <div class="priceItem">
+
+                        <p class="priceName">Досудебная подготовка (интервьюирование, изучение документов, выработка позиции, составление искового заявления)</p>
+                        <div class="price">
+                            <p>25 000</p>
+                            <p>рублей за день занятости</p>
+                        </div>
+
+                </div>
+                <div class="priceItem">
+
+                        <p class="priceName">Работа в качестве представителя в гражданскомсудопроизводстве</p>
+                        <div class="price">
+                            <p>10 000</p>
+                            <p>рублей за день занятости</p>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="appoint">
+            <h2>Запись на приём Адвоката</h2>
+
+            <div class="form">
+                <div class="inputs">
+                    <input type="text" placeholder="Имя" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Телефон"
+                    required>
+                </div>
+                <textarea cols="30" rows="30" placeholder="Оставьте ваш комментарий к записи"></textarea>
+                <button>Записаться</button>
+            </div>
+    </section>
 </main>
 
-    <!-- <nav class="sideNav"></nav> -->
+<footer>
+    <p><a href="https://github.com/JagMax" target="_blanc"><span class="brandColor1">Ceph</span><span class="brandColor2">eon</span> 2023</a></p>
+</footer>
+
 </body>
 </html>

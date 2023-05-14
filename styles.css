@@ -4,12 +4,19 @@
   --primary-color: #1e2d3a;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
 body {
   font-family: "Rubik", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #ddd;
 }
+
+/* nav */
 
 .colorWrapper {
   background-color: var(--primary-color);
@@ -118,12 +125,19 @@ body {
   margin: 5px;
 }
 
+.mainNav li a:hover {
+  color: darkorange;
+}
+
 /* main */
 
 main {
   max-width: 1400px;
   margin: 90px auto 0;
-  background-color: #fff;
+  padding-bottom: 90px;
+  background-color: #f9f9f9;
+  position: static;
+  box-sizing: border-box;
 }
 
 .hero {
@@ -136,6 +150,7 @@ main {
   object-fit: contain;
   box-shadow: 0px 4px 10px 0px #000;
   overflow: hidden;
+  margin-bottom: 40px;
 }
 
 .hero:hover .imgWrapper img {
@@ -223,20 +238,22 @@ main {
 }
 
 .socials i:hover {
-  background-color: var(--primary-color);
-  color: #fff;
+  background-color: darkorange;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 /* services */
 #services {
-  padding: 40px;
+  padding: 10px 40px 40px;
   box-sizing: border-box;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 #services h2 {
   font-size: 2em;
-  margin: 40px;
+  margin: 10px 40px 40px;
 }
 
 .servicesGrid {
@@ -306,4 +323,177 @@ main {
 .service button:hover {
   background-color: var(--primary-color);
   color: #fff;
+}
+
+/* prices */
+#prices {
+  margin: 40px auto;
+  padding: 10px;
+  width: 70%;
+  min-width: 400px;
+  border: 4px solid var(--primary-color);
+  border-radius: 30px;
+}
+
+.pricesInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.pricesInner .heading {
+  text-align: center;
+  background-color: var(--primary-color);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.pricesTable {
+  background-color: var(--primary-color);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+
+.priceItem {
+  width: 80%;
+  margin: 15px auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.priceName {
+  width: 70%;
+}
+
+.priceItem .price {
+  text-align: center;
+  width: 20%;
+}
+
+.priceItem .price p:first-child {
+  color: darkorange;
+}
+
+/* appointment */
+
+#appoint {
+  width: 60%;
+  min-width: 500px;
+  margin: 80px auto 0;
+  padding: 40px 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+  background-color: #eee;
+}
+
+#appoint h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form .inputs {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form .inputs input {
+  min-width: 200px;
+  width: 40%;
+  border-radius: 20px;
+  border: 2px solid var(--primary-color);
+  padding: 10px 14px;
+  font-size: 1em;
+}
+
+.form textarea {
+  display: block;
+  margin: 20px auto;
+  height: 60px;
+  width: 60%;
+  min-width: 400px;
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+  font-size: 1.2em;
+  padding: 10px 14px;
+  resize: none;
+}
+
+.form button {
+  padding: 10px 14px;
+  width: 50%;
+  margin: 20px auto;
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1em;
+  cursor: pointer;
+
+  transition: 0.4s ease;
+}
+
+.form button:hover {
+  scale: 1.05;
+  color: var(--primary-color);
+  background-color: #fff;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  background-color: var(--primary-color);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px #000;
+}
+
+footer p {
+  cursor: pointer;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.brandColor1 {
+  color: #77d8d8;
+}
+
+.brandColor2 {
+  color: #f2a365;
+}
+
+@media screen and (max-width: 1200px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
